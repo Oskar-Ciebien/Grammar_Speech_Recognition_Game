@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<grammar xml:lang="en" tag-format="semantics/1.0" version="1.0" xmlns="http://www.w3.org/2001/06/grammar" root="toplevel">
+
+    <rule id="toplevel" scope="public">
+        <!-- <one-of> -->
+        <item>
+            <ruleref uri="#playstate" />
+        </item>
+        <!-- </one-of> -->
+    </rule>
+
+    <rule id="playstate">
+        <one-of>
+            <item>
+                <tag>out.action = "new";</tag>
+
+                <one-of>
+                    <item>Start a new game</item>
+                    <item>Begin a new game</item>
+                    <item>Play a new game</item>
+                    <item>New Game</item>
+                    <item>I want to play</item>
+                </one-of>
+            </item>
+
+            <item>
+                <tag>out.action = "quit";</tag>
+
+                <one-of>
+                    <item>Quit the game</item>
+                    <item>I give up</item>
+                </one-of>
+            </item>
+
+            <item>
+                <tag>out.action = "pause";</tag>
+
+                <one-of>
+                    <item>Pause the game</item>
+                    <item>Stop the game</item>
+                    <item>Wait a minute</item>
+                </one-of>
+            </item>
+
+            <item>
+                <tag>out.action = "mute";</tag>
+
+                <one-of>
+                    <item>Stop the sounds</item>
+                    <item>Mute sounds</item>
+                    <item>Mute game sounds</item>
+                </one-of>
+            </item>
+
+            <item>
+                <tag>out.action = "unmute";</tag>
+
+                <one-of>
+                    <item>Play the sounds</item>
+                    <item>Unmute sounds</item>
+                    <item>Unmute game sounds</item>
+                </one-of>
+            </item>
+
+            <item>
+                <tag>out.action = "powerup";</tag>
+
+                <one-of>
+                    <item>Give me a power up</item>
+                    <item>Power up now</item>
+                </one-of>
+            </item>
+
+            <item>
+                <tag>out.action = "left";</tag>
+
+                <one-of>
+                    <item>Move to the left</item>
+                    <item>Move left</item>
+                    <item>Go to the left</item>
+                    <item>Go left</item>
+                </one-of>
+            </item>
+
+            <item>
+                <tag>out.action = "right";</tag>
+
+                <one-of>
+                    <item>Move to the right</item>
+                    <item>Move right</item>
+                    <item>Go to the right</item>
+                    <item>Go right</item>
+                </one-of>
+            </item>
+        </one-of>
+    </rule>
+</grammar>
