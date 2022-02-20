@@ -13,12 +13,13 @@
     <rule id="playstate">
         <one-of>
             <item>
-                <tag>out.action = "new";</tag>
+                <tag>out.action = "start";</tag>
 
                 <one-of>
                     <item>Start a new game</item>
                     <item>Begin a new game</item>
                     <item>Play a new game</item>
+                    <item>Start the game</item>
                     <item>New Game</item>
                     <item>I want to play</item>
                 </one-of>
