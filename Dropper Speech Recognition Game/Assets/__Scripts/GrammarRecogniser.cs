@@ -36,7 +36,7 @@ public class GrammarRecogniser : MonoBehaviour
 
         // Read the semantic meanings from the args returned
         // Put them in a string to print a message in the console
-        StringBuilder message = new StringBuilder();
+        string message = "";
         SemanticMeaning[] meanings = args.semanticMeanings;
 
         // Return a set of name/value pairs - keys/values
@@ -45,13 +45,11 @@ public class GrammarRecogniser : MonoBehaviour
             string keyString = meaning.key.Trim();
             string valueString = meaning.values[0].Trim();
 
-            message.Append("Key: " + keyString +
-                            ", Value: " + valueString +
-                            System.Environment.NewLine);
+            message = "Key: " + keyString + ", Value: " + valueString;
         }
 
         DisplayText.text = message.ToString();
-        Debug.Log(message);
+        Debug.Log("Text Message: " + message);
     }
 
     private void OnApplicationQuit()
