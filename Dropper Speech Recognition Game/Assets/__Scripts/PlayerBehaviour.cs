@@ -6,19 +6,19 @@ public class PlayerBehaviour : MonoBehaviour
 {
     // == Public Fields ==
     public static GameObject Player;
-    public static Vector2 playerPosition;
 
     // == Private Fields ==
     private static float leftBorder = -2f;
     private static float rightBorder = 2f;
-    private static float position;
+    private static float playerPosition;
 
     void Start()
     {
+        // Set player to this Game Object
         Player = this.gameObject;
 
-        playerPosition = transform.position;
-        position = 0f;
+        // Set position to 0
+        playerPosition = 0f;
     }
 
     void OnCollisionEnter2D()
@@ -31,11 +31,13 @@ public class PlayerBehaviour : MonoBehaviour
         // If command is to move left
         if (direction == "left")
         {
+            // Call MoveLeft method
             MoveLeft();
         }
         // Otherwise if command is to move right
         else if (direction == "right")
         {
+            // Call MoveRight method
             MoveRight();
         }
     }
@@ -43,16 +45,17 @@ public class PlayerBehaviour : MonoBehaviour
     static void MoveRight()
     {
         // Check if player is at the right border
-        if (position < rightBorder)
+        if (playerPosition < rightBorder)
         {
             // Move player to the right
             Player.transform.Translate(new Vector2(0, -2));
 
-            position += 2f;
+            // Change player position
+            playerPosition += 2f;
 
             Debug.Log("Player moved right."); // Used for testing
         }
-        else
+        else // If player is at the border
         {
             Debug.Log("Player has reached the right border");
         }
@@ -61,16 +64,17 @@ public class PlayerBehaviour : MonoBehaviour
     static void MoveLeft()
     {
         // Check if player is at the left border
-        if (position > leftBorder)
+        if (playerPosition > leftBorder)
         {
             // Move player to the left
             Player.transform.Translate(new Vector2(0, 2));
 
-            position -= 2f;
+            // Change player position
+            playerPosition -= 2f;
 
             Debug.Log("Player moved left."); // Used for testing
         }
-        else
+        else // If player is at the border
         {
             Debug.Log("Player has reached the left border");
         }

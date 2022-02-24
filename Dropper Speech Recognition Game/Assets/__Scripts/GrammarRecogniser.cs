@@ -47,6 +47,7 @@ public class GrammarRecogniser : MonoBehaviour
 
             message = "Key: " + keyString + ", Value: " + valueString;
 
+            // Call the Move method from PlayerBehvaviour passing the valueString
             PlayerBehaviour.Move(valueString);
         }
 
