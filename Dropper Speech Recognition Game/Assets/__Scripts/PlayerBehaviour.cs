@@ -46,7 +46,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (position < rightBorder)
         {
             // Move player to the right
-            Player.transform.Translate(new Vector2(2, 0));
+            Player.transform.Translate(new Vector2(0, -2));
 
             position += 2f;
 
@@ -64,7 +64,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (position > leftBorder)
         {
             // Move player to the left
-            Player.transform.Translate(new Vector2(-2, 0));
+            Player.transform.Translate(new Vector2(0, 2));
 
             position -= 2f;
 
