@@ -46,6 +46,8 @@ public class GrammarRecogniser : MonoBehaviour
             string valueString = meaning.values[0].Trim();
 
             message = "Key: " + keyString + ", Value: " + valueString;
+
+            PlayerBehaviour.Move(valueString);
         }
 
         DisplayText.text = message.ToString();
