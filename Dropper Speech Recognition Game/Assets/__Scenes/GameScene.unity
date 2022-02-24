@@ -316,30 +316,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawners
       objectReference: {fileID: 0}
-    - target: {fileID: 1673401463934289162, guid: 427d78b79b110d242bccc912deb0c871, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1673401463934289162, guid: 427d78b79b110d242bccc912deb0c871, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1280759657
-      objectReference: {fileID: 0}
-    - target: {fileID: 6949289179721843388, guid: 427d78b79b110d242bccc912deb0c871, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6949289179721843388, guid: 427d78b79b110d242bccc912deb0c871, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1280759657
-      objectReference: {fileID: 0}
-    - target: {fileID: 7003995658615311338, guid: 427d78b79b110d242bccc912deb0c871, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7003995658615311338, guid: 427d78b79b110d242bccc912deb0c871, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1280759657
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 427d78b79b110d242bccc912deb0c871, type: 3}
 --- !u!1001 &2317678776225989561
@@ -463,14 +439,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6034113798830316441, guid: ab19a971021c4fe40b9a468484cb0731, type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6034113798830316441, guid: ab19a971021c4fe40b9a468484cb0731, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 265344515
-      objectReference: {fileID: 0}
     - target: {fileID: 6034113798830316443, guid: ab19a971021c4fe40b9a468484cb0731, type: 3}
       propertyPath: m_Name
       value: Player
