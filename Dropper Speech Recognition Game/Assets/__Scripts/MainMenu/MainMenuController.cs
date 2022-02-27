@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    public void Play()
+    public static void Play()
     {
         // Reset Lives
         PlayerPrefs.SetInt("Lives", PlayerBehaviour.startLives);
@@ -15,11 +15,15 @@ public class MainMenuController : MonoBehaviour
 
         // Loads the gamescene and begins the game
         SceneManager.LoadScene("GameScene");
+
+        print("Game Started!");
     }
 
-    public void Exit()
+    public static void Exit()
     {
         // Quits the game
         Application.Quit();
+
+        print("Quit the game!");
     }
 }

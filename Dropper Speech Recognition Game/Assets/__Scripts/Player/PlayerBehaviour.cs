@@ -37,23 +37,7 @@ public class PlayerBehaviour : MonoBehaviour
         PlayerPrefs.SetInt("Lives", startLives);
     }
 
-    public static void Move(string direction)
-    {
-        // If command is to move left
-        if (direction == "left")
-        {
-            // Call MoveLeft method
-            MoveLeft();
-        }
-        // Otherwise if command is to move right
-        else if (direction == "right")
-        {
-            // Call MoveRight method
-            MoveRight();
-        }
-    }
-
-    static void MoveRight()
+    public static void MoveRight()
     {
         // Check if player is at the right border
         if (playerPosition < rightBorder)
@@ -72,7 +56,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-    static void MoveLeft()
+    public static void MoveLeft()
     {
         // Check if player is at the left border
         if (playerPosition > leftBorder)
