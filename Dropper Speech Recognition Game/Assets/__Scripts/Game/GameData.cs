@@ -8,10 +8,19 @@ public class GameData : MonoBehaviour
     // == Public Fields ==
     public static GameData singleton;
     public Text scoreText = null;
-    public static int sharedScore = 0; // Used for showing score to other scripts
 
     // == Private Fields ==
-    private int score = 0;
+    private static int score = 0;
+
+    private void Update()
+    {
+        // If scoreText is not null
+        if (scoreText != null)
+        {
+            // Set the score to the text
+            scoreText.text = PlayerPrefs.GetInt("Score").ToString();
+        }
+    }
 
     private void Awake()
     {
@@ -39,24 +48,10 @@ public class GameData : MonoBehaviour
     } // Awake END
 
     // Updates the Score on the screen
-    public void UpdateScore(int s)
+    public static void UpdateScore(int s)
     {
+        score = PlayerPrefs.GetInt("Score");
         // Update the score into PlayerPrefs
         PlayerPrefs.SetInt("Score", score += s);
-        sharedScore = score;
-
-        // If scoreText is not null
-        if (scoreText != null)
-        {
-            // Set the new score to the text
-            scoreText.text = PlayerPrefs.GetInt("Score").ToString();
-        }
     } // UpdateScore END
-
-    // Reset Score Variables
-    public void ResetScore()
-    {
-        score = 0;
-        sharedScore = 0;
-    }
 } // Class - END

@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObstacleRemover : MonoBehaviour
 {
     // == Private Fields ==
-    private float position = -8f;
+    private float position = -7.6f;
     void Update()
     {
         // If the obstacles crossed the position
@@ -13,6 +13,9 @@ public class ObstacleRemover : MonoBehaviour
         {
             // Destroy the game object
             Destroy(gameObject);
+
+            // Update Score when obstacle is destroyed
+            GameData.UpdateScore(1);
         }
     }
 }
