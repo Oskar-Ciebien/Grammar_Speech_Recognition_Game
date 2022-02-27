@@ -23,7 +23,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     void OnCollisionEnter2D()
     {
-
+        
     }
 
     public static void Move(string direction)
