@@ -35,7 +35,7 @@ public class GameData : MonoBehaviour
         scoreText.text = PlayerPrefs.GetInt("Score").ToString();
 
         // print(score); // Used for testing
-        // print(PlayerPrefs.GetInt("Score")); // Used for testing
+        print(PlayerPrefs.GetInt("Score")); // Used for testing
     } // Awake END
 
     // Updates the Score on the screen
