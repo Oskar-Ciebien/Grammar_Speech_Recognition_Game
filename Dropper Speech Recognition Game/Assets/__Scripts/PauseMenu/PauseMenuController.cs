@@ -11,7 +11,9 @@ public class PauseMenuController : MonoBehaviour
 
     private void Start()
     {
+        print(pauseMenu);
         pauseMenu = FindIncludingInactive("PauseMenu"); // Disabled by default, so have to go through all objects in game
+        print(pauseMenu);
     }
 
     public static void PauseGame()
