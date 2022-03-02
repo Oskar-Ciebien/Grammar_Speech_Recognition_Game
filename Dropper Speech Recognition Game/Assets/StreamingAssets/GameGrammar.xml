@@ -22,6 +22,13 @@
                     <item>Start the game</item>
                     <item>New Game</item>
                     <item>I want to play</item>
+                    <item>Start game</item>
+                    <item>Begin the game</item>
+                    <item>Kick off the game</item>
+                    <item>Let's go</item>
+                    <item>Let's start</item>
+                    <item>Play the game</item>
+                    <item>New game</item>
                 </one-of>
             </item>
 
@@ -31,6 +38,12 @@
                 <one-of>
                     <item>Quit the game</item>
                     <item>I give up</item>
+                    <item>Leave the game</item>
+                    <item>Exit the game</item>
+                    <item>I don't want to play anymore</item>
+                    <item>I do not want to play anymore</item>
+                    <item>Stop the game</item>
+                    <item>Turn off the game</item>
                 </one-of>
             </item>
 
@@ -41,6 +54,21 @@
                     <item>Pause the game</item>
                     <item>Stop the game</item>
                     <item>Wait a minute</item>
+                    <item>Stop for a second</item>
+                    <item>Give me a break</item>
+                    <item>Freeze the game</item>
+                </one-of>
+            </item>
+
+            <item>
+                <tag>out.action = "unpause";</tag>
+
+                <one-of>
+                    <item>Resume the game</item>
+                    <item>Unpause the game</item>
+                    <item>Unfreeze the game</item>
+                    <item>Continue on with the game</item>
+                    <item>Continue the game</item>
                 </one-of>
             </item>
 
@@ -51,6 +79,9 @@
                     <item>Stop the sounds</item>
                     <item>Mute sounds</item>
                     <item>Mute game sounds</item>
+                    <item>Sound off</item>
+                    <item>Sounds off</item>
+                    <item>Sound effects off</item>
                 </one-of>
             </item>
 
@@ -61,6 +92,10 @@
                     <item>Play the sounds</item>
                     <item>Unmute sounds</item>
                     <item>Unmute game sounds</item>
+                    <item>Play the game sounds</item>
+                    <item>Sound on</item>
+                    <item>Sounds on</item>
+                    <item>Sound effects on</item>
                 </one-of>
             </item>
 
@@ -81,6 +116,13 @@
                     <item>Move left</item>
                     <item>Go to the left</item>
                     <item>Go left</item>
+                    <item>Proceed left</item>
+                    <item>Shift left</item>
+                    <item>Shift to the left</item>
+                    <item>Travel left</item>
+                    <item>Travel to the left</item>
+                    <item>Change position to the left</item>
+                    <item>Jump to the left</item>
                 </one-of>
             </item>
 
@@ -92,6 +134,13 @@
                     <item>Move right</item>
                     <item>Go to the right</item>
                     <item>Go right</item>
+                    <item>Proceed right</item>
+                    <item>Shift right</item>
+                    <item>Shift to the right</item>
+                    <item>Travel right</item>
+                    <item>Travel to the right</item>
+                    <item>Change position to the right</item>
+                    <item>Jump to the right</item>
                 </one-of>
             </item>
 
@@ -114,6 +163,13 @@
                     <item>Take me to settings</item>
                     <item>Go to options</item>
                     <item>Go to settings</item>
+                    <item>Let me adjust the settings</item>
+                    <item>Let me adjust the options</item>
+                    <item>Take me to game settings</item>
+                    <item>Let me change game settings</item>
+                    <item>I want to change settings</item>
+                    <item>I want to change game options</item>
+                    <item>I want to change game settings</item>
                 </one-of>
             </item>
 
@@ -124,6 +180,11 @@
                     <item>Go back</item>
                     <item>Take me back to Main Menu</item>
                     <item>Move back</item>
+                    <item>Take me back</item>
+                    <item>I want to go back</item>
+                    <item>Back to main menu</item>
+                    <item>Go to main menu</item>
+                    <item>Go back to the main menu</item>
                 </one-of>
             </item>
         </one-of>
