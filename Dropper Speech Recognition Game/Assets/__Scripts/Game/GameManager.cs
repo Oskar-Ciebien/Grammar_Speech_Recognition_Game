@@ -52,5 +52,25 @@ public class GameManager : MonoBehaviour
             // Call the play method in main menu
             MainMenuController.Back();
         }
+        else if (value == "pause")
+        {
+            // Call the pause game method in the pause menu
+            PauseMenuController.PauseGame();
+        }
+        else if (value == "unpause")
+        {
+            // Call the resume game method in the pause menu
+            PauseMenuController.ResumeGame();
+        }
+        else if (value == "mute")
+        {
+            // Call the mute method in the pause menu
+            PauseMenuController.Mute();
+        }
+        else if (value == "unmute")
+        {
+            // Call the unmute method in the pause menu
+            PauseMenuController.unMute();
+        }
     }
 }
