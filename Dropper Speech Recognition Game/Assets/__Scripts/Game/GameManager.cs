@@ -34,5 +34,23 @@ public class GameManager : MonoBehaviour
             // Call the play method in main menu
             MainMenuController.Exit();
         }
+        // Otherwise if command is to change the colour of the player
+        else if (value == "color")
+        {
+            // Call the play method in main menu
+            MainMenuController.ChangeColour();
+        }
+        // Otherwise if command is to go to the options menu
+        else if (value == "options")
+        {
+            // Call the play method in main menu
+            MainMenuController.Options();
+        }
+        // Otherwise if command is to move back out of options menu
+        else if (value == "back")
+        {
+            // Call the play method in main menu
+            MainMenuController.Back();
+        }
     }
 }

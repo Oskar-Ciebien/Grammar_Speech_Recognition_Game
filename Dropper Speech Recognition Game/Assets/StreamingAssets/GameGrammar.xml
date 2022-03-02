@@ -94,6 +94,38 @@
                     <item>Go right</item>
                 </one-of>
             </item>
+
+            <item>
+                <tag>out.action = "color";</tag>
+
+                <one-of>
+                    <item>Change the color of the player</item>
+                    <item>Change color</item>
+                    <item>Change the color</item>
+                    <item>Give me a different color</item>
+                </one-of>
+            </item>
+
+            <item>
+                <tag>out.action = "options";</tag>
+
+                <one-of>
+                    <item>Take me to options</item>
+                    <item>Take me to settings</item>
+                    <item>Go to options</item>
+                    <item>Go to settings</item>
+                </one-of>
+            </item>
+
+            <item>
+                <tag>out.action = "back";</tag>
+
+                <one-of>
+                    <item>Go back</item>
+                    <item>Take me back to Main Menu</item>
+                    <item>Move back</item>
+                </one-of>
+            </item>
         </one-of>
     </rule>
 </grammar>
