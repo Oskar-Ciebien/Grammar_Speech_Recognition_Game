@@ -12,7 +12,7 @@ public class MainMenuController : MonoBehaviour
 
     private void Start()
     {
-        // Set the main menu and options menu objects
+        // Set the main menu, options and player prefab menu objects
         mainMenu = GameObject.Find("MainMenu");
         optionsMenu = FindIncludingInactive("OptionsMenu"); // Disabled by default, so have to go through all objects in game
         playerPrefab = GameObject.Find("Player");
@@ -20,6 +20,7 @@ public class MainMenuController : MonoBehaviour
 
     public static void Play()
     {
+        // If the main menu is active and options menu is not active
         if (mainMenu.activeSelf == true && optionsMenu.activeSelf == false)
         {
             // Reset Lives
@@ -37,6 +38,7 @@ public class MainMenuController : MonoBehaviour
 
     public static void Options()
     {
+        // If the main menu is active and options menu is not active
         if (mainMenu.activeSelf == true && optionsMenu.activeSelf == false)
         {
             mainMenu.SetActive(false);
@@ -48,6 +50,7 @@ public class MainMenuController : MonoBehaviour
 
     public static void ChangeColour()
     {
+        // If the main menu is not active and options menu is active
         if (mainMenu.activeSelf == false && optionsMenu.activeSelf == true)
         {
             playerPrefab.GetComponent<SpriteRenderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
@@ -60,6 +63,7 @@ public class MainMenuController : MonoBehaviour
 
     public static void Back()
     {
+        // If the main menu is not active and options menu is active
         if (mainMenu.activeSelf == false && optionsMenu.activeSelf == true)
         {
             mainMenu.SetActive(true);
@@ -71,6 +75,7 @@ public class MainMenuController : MonoBehaviour
 
     public static void Exit()
     {
+        // If the main menu is active and options menu is not active
         if (mainMenu.activeSelf == true && optionsMenu.activeSelf == false)
         {
             // Quits the game
@@ -81,9 +86,9 @@ public class MainMenuController : MonoBehaviour
     }
 
     // Adapted from https://www.codedojo.com/?p=2155
+    // The next two methods go through all the objects in the Main Menu scene and try to find the right game object by the name
     public static GameObject FindInChildrenIncludingInactive(GameObject go, string objName)
     {
-
         for (int i = 0; i < go.transform.childCount; i++)
         {
             if (go.transform.GetChild(i).gameObject.name == objName) return go.transform.GetChild(i).gameObject;
