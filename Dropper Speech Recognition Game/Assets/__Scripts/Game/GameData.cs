@@ -8,6 +8,7 @@ public class GameData : MonoBehaviour
     // == Public Fields ==
     public static GameData singleton;
     public Text scoreText = null;
+    public Text livesText = null;
 
     // == Private Fields ==
     private static int score = 0;
@@ -19,6 +20,13 @@ public class GameData : MonoBehaviour
         {
             // Set the score to the text
             scoreText.text = PlayerPrefs.GetInt("Score").ToString();
+        }
+
+        // If livesText is not null
+        if (livesText != null)
+        {
+            // Set the lives to the text
+            livesText.text = PlayerPrefs.GetInt("Lives").ToString();
         }
     }
 
@@ -42,6 +50,9 @@ public class GameData : MonoBehaviour
         }
         // Display score to the text
         scoreText.text = PlayerPrefs.GetInt("Score").ToString();
+
+        // Display lives to the text
+        livesText.text = PlayerPrefs.GetInt("Lives").ToString();
 
         // print(score); // Used for testing
         print(PlayerPrefs.GetInt("Score")); // Used for testing
