@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DeathMenuController : MonoBehaviour
 {
-    public void GoMainMenu()
+    public static void GoMainMenu()
     {
         // Loads the Main Menu
         SceneManager.LoadScene("MainMenu");

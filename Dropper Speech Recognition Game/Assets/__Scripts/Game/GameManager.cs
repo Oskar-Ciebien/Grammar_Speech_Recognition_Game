@@ -72,5 +72,10 @@ public class GameManager : MonoBehaviour
             // Call the unmute method in the pause menu
             PauseMenuController.unMute();
         }
+        else if (value == "restart")
+        {
+            // Call the GoMainMenu method in the death menu
+            DeathMenuController.GoMainMenu();
+        }
     }
 }

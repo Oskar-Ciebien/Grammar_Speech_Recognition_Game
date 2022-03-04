@@ -187,6 +187,18 @@
                     <item>Go back to the main menu</item>
                 </one-of>
             </item>
+
+            <item>
+                <tag>out.action = "restart";</tag>
+
+                <one-of>
+                    <item>Restart the game</item>
+                    <item>Restart game</item>
+                    <item>Start again</item>
+                    <item>Give me another chance</item>
+                    <item>Let me try again</item>
+                </one-of>
+            </item>
         </one-of>
     </rule>
 </grammar>
