@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     // == Public Fields ==
     public static float startingLives = 3;
     public static float startingScore = 0;
+    public static bool paused = false;
 
     public static void Listen(string value)
     {
@@ -54,11 +55,17 @@ public class GameManager : MonoBehaviour
         }
         else if (value == "pause")
         {
+            // Game Paused
+            paused = true;
+
             // Call the pause game method in the pause menu
             PauseMenuController.PauseGame();
         }
         else if (value == "unpause")
         {
+            // Game Resumed
+            paused = false;
+
             // Call the resume game method in the pause menu
             PauseMenuController.ResumeGame();
         }

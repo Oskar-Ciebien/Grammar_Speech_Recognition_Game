@@ -11,23 +11,29 @@ public class PauseMenuController : MonoBehaviour
 
     private void Start()
     {
-        print(pauseMenu);
         pauseMenu = FindIncludingInactive("PauseMenu"); // Disabled by default, so have to go through all objects in game
-        print(pauseMenu);
     }
 
     public static void PauseGame()
     {
+        // Set paused to true - Game Paused
+        GameManager.paused = true;
+
         // Show the PauseMenu
         pauseMenu.SetActive(true);
+
         // Pause the Game
         Time.timeScale = 0f;
     }
 
     public static void ResumeGame()
     {
+        // Set paused to false - Game UnPaused
+        GameManager.paused = false;
+
         // Disable the PauseMenu
         pauseMenu.SetActive(false);
+
         // Resume the Game
         Time.timeScale = 1f;
     }
