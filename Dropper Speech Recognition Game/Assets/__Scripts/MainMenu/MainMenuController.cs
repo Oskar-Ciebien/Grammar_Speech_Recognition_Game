@@ -45,7 +45,10 @@ public class MainMenuController : MonoBehaviour
         // If the main menu is active and options menu is not active
         if (mainMenu.activeSelf == true && optionsMenu.activeSelf == false)
         {
+            // Disable Main Menu
             mainMenu.SetActive(false);
+
+            // Enable options menu
             optionsMenu.SetActive(true);
 
             print("Options Menu!");
@@ -57,21 +60,21 @@ public class MainMenuController : MonoBehaviour
         // If the main menu is not active and options menu is active
         if (mainMenu.activeSelf == false && optionsMenu.activeSelf == true)
         {
-            print("HERE!");
-
+            // Get random RGB
             r = (Random.Range(50.0f, 150.0f)) / 255;
             g = (Random.Range(50.0f, 150.0f)) / 255;
             b = (Random.Range(50.0f, 150.0f)) / 255;
 
+            // Set them to Player Prefs
             PlayerPrefs.SetFloat("ColourR", r);
             PlayerPrefs.SetFloat("ColourG", g);
             PlayerPrefs.SetFloat("ColourB", b);
 
+            // Set the player colour on the MainMenu Scene
             playerPrefab.GetComponent<SpriteRenderer>().color = new Color(r, g, b, 1.0f);
 
-            print("Player Colour " + playerPrefab.GetComponent<SpriteRenderer>().color);
-
-
+            // Print out the colour
+            // print("Player Colour " + playerPrefab.GetComponent<SpriteRenderer>().color);
 
             print("Changed Colour!");
         }
@@ -82,7 +85,10 @@ public class MainMenuController : MonoBehaviour
         // If the main menu is not active and options menu is active
         if (mainMenu.activeSelf == false && optionsMenu.activeSelf == true)
         {
+            // Enable Main Menu
             mainMenu.SetActive(true);
+
+            // Disable Options Menu
             optionsMenu.SetActive(false);
 
             print("Back to Main Menu!");
