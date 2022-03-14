@@ -15,7 +15,9 @@ public class PlayerBehaviour : MonoBehaviour
     private int lives;
     private float reloadTime = 2.0f;
     private string playerColourStr;
-    private Color playerColour;
+    private float r;
+    private float g;
+    private float b;
 
     void Start()
     {
@@ -28,13 +30,13 @@ public class PlayerBehaviour : MonoBehaviour
         // Get Lives Left from the PlayerPrefs
         lives = PlayerPrefs.GetInt("Lives");
 
-        playerColourStr = PlayerPrefs.GetString("Colour");
+        // Get RGB Colours from Player Prefs
+        r = PlayerPrefs.GetFloat("ColourR");
+        g = PlayerPrefs.GetFloat("ColourG");
+        b = PlayerPrefs.GetFloat("ColourB");
 
-        print(playerColourStr);
-
-        //playerColour = Color.Parse(playerColourStr);
-
-        //Player.GetComponent<SpriteRenderer>().color = playerColourStr;
+        // Set the colour to the prefab
+        Player.GetComponent<SpriteRenderer>().color = new Color(r, g, b, 1f);
     }
 
     void ResetPlayer()

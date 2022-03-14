@@ -10,7 +10,9 @@ public class MainMenuController : MonoBehaviour
     public static GameObject optionsMenu;
     public static GameObject playerPrefab;
     // == Private Fields ==
-    private static Color playerColour;
+    private static float r;
+    private static float g;
+    private static float b;
 
     private void Start()
     {
@@ -55,12 +57,21 @@ public class MainMenuController : MonoBehaviour
         // If the main menu is not active and options menu is active
         if (mainMenu.activeSelf == false && optionsMenu.activeSelf == true)
         {
-            playerPrefab.GetComponent<SpriteRenderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+            print("HERE!");
 
-            print(playerPrefab.GetComponent<SpriteRenderer>().material.color);
+            r = (Random.Range(50.0f, 150.0f)) / 255;
+            g = (Random.Range(50.0f, 150.0f)) / 255;
+            b = (Random.Range(50.0f, 150.0f)) / 255;
 
-            playerColour = playerPrefab.GetComponent<SpriteRenderer>().material.color;
-            PlayerPrefs.SetString("Colour", playerColour.ToString());
+            PlayerPrefs.SetFloat("ColourR", r);
+            PlayerPrefs.SetFloat("ColourG", g);
+            PlayerPrefs.SetFloat("ColourB", b);
+
+            playerPrefab.GetComponent<SpriteRenderer>().color = new Color(r, g, b, 1.0f);
+
+            print("Player Colour " + playerPrefab.GetComponent<SpriteRenderer>().color);
+
+
 
             print("Changed Colour!");
         }
