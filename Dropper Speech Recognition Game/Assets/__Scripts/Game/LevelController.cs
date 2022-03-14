@@ -19,10 +19,12 @@ public class LevelController : MonoBehaviour
             // Increase game speed
             Time.timeScale = GameManager.levelTwoSpeed;
 
+            // Set current level test
             currentLevel = "Level 2";
         }
-        else
+        else // Otherwise
         {
+            // Set current level test
             currentLevel = "Level 1";
         }
 
