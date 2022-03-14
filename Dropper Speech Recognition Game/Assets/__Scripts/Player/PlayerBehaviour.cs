@@ -7,8 +7,6 @@ public class PlayerBehaviour : MonoBehaviour
 {
     // == Public Fields ==
     public static GameObject Player;
-    public static int startLives = 3;
-    public static int startScore = 0;
 
     // == Private Fields ==
     private static float leftBorder = -2f;
@@ -16,6 +14,8 @@ public class PlayerBehaviour : MonoBehaviour
     private static float playerPosition;
     private int lives;
     private float reloadTime = 2.0f;
+    private string playerColourStr;
+    private Color playerColour;
 
     void Start()
     {
@@ -27,14 +27,22 @@ public class PlayerBehaviour : MonoBehaviour
 
         // Get Lives Left from the PlayerPrefs
         lives = PlayerPrefs.GetInt("Lives");
+
+        playerColourStr = PlayerPrefs.GetString("Colour");
+
+        print(playerColourStr);
+
+        //playerColour = Color.Parse(playerColourStr);
+
+        //Player.GetComponent<SpriteRenderer>().color = playerColourStr;
     }
 
     void ResetPlayer()
     {
         // Set the lives left to the default amount
-        PlayerPrefs.SetInt("Score", startScore);
+        PlayerPrefs.SetInt("Score", GameManager.startingScore);
         // Set the lives left to the default amount
-        PlayerPrefs.SetInt("Lives", startLives);
+        PlayerPrefs.SetInt("Lives", GameManager.startingLives);
     }
 
     public static void MoveRight()

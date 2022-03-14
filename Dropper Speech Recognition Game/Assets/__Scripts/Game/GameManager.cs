@@ -5,9 +5,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     // == Public Fields ==
-    public static float startingLives = 3;
-    public static float startingScore = 0;
+    public static int startingLives = 3;
+    public static int startingScore = 0;
     public static bool paused = false;
+    public static float levelTwoScore = 10f;
+    public static float levelTwoSpeed = 2f;
 
     public static void Listen(string value)
     {

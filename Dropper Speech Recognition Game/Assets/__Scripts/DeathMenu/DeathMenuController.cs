@@ -7,11 +7,13 @@ public class DeathMenuController : MonoBehaviour
 {
     public static void GoMainMenu()
     {
+        // Set current scene
         Scene scene = SceneManager.GetActiveScene();
 
+        // If on DeathScene
         if (scene.name == "DeathScene")
         {
-            // Loads the Main Menu
+            // Load the Main Menu
             SceneManager.LoadScene("MainMenu");
         }
     }

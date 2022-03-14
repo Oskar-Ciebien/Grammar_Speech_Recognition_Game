@@ -9,6 +9,8 @@ public class MainMenuController : MonoBehaviour
     public static GameObject mainMenu;
     public static GameObject optionsMenu;
     public static GameObject playerPrefab;
+    // == Private Fields ==
+    private static Color playerColour;
 
     private void Start()
     {
@@ -24,10 +26,10 @@ public class MainMenuController : MonoBehaviour
         if (mainMenu.activeSelf == true && optionsMenu.activeSelf == false)
         {
             // Reset Lives
-            PlayerPrefs.SetInt("Lives", PlayerBehaviour.startLives);
+            PlayerPrefs.SetInt("Lives", GameManager.startingLives);
 
             // Reset Score
-            PlayerPrefs.SetInt("Score", PlayerBehaviour.startScore);
+            PlayerPrefs.SetInt("Score", GameManager.startingScore);
 
             // Loads the gamescene and begins the game
             SceneManager.LoadScene("GameScene");
@@ -55,7 +57,10 @@ public class MainMenuController : MonoBehaviour
         {
             playerPrefab.GetComponent<SpriteRenderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
 
-            //PlayerPrefs.SetString("myColor", playerPrefab.GetComponent<SpriteRenderer>().material.color);
+            print(playerPrefab.GetComponent<SpriteRenderer>().material.color);
+
+            playerColour = playerPrefab.GetComponent<SpriteRenderer>().material.color;
+            PlayerPrefs.SetString("Colour", playerColour.ToString());
 
             print("Changed Colour!");
         }

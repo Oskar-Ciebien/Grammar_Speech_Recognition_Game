@@ -8,6 +8,7 @@ public class PauseMenuController : MonoBehaviour
     // == Public Fields ==
     public static GameObject pauseMenu;
     public static AudioSource inGameMusic;
+    public static GameObject audioSource;
 
     private void Start()
     {
