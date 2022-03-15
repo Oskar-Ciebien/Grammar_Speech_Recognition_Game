@@ -7,12 +7,15 @@ public class PauseMenuController : MonoBehaviour
 {
     // == Public Fields ==
     public static GameObject pauseMenu;
-    public static AudioSource inGameMusic;
-    public static GameObject audioSource;
+    public static GameObject gameMusic;
+    public static AudioSource music;
 
     private void Start()
     {
         pauseMenu = FindIncludingInactive("PauseMenu"); // Disabled by default, so have to go through all objects in game
+        gameMusic = GameObject.Find("GameMusic");
+
+        music = gameMusic.GetComponent<AudioSource>();
     }
 
     public static void PauseGame()
@@ -41,17 +44,17 @@ public class PauseMenuController : MonoBehaviour
 
     public static void Mute()
     {
-        if (inGameMusic.mute == true)
+        if (music.mute == false)
         {
-            inGameMusic.mute = false;
+            music.mute = true;
         }
     }
 
     public static void unMute()
     {
-        if (inGameMusic.mute == false)
+        if (music.mute == true)
         {
-            inGameMusic.mute = true;
+            music.mute = false;
         }
     }
 
