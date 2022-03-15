@@ -45,7 +45,7 @@ public class GrammarRecogniser : MonoBehaviour
             string keyString = meaning.key.Trim();
             string valueString = meaning.values[0].Trim();
 
-            message = "Key: " + keyString + ", Value: " + valueString;
+            message = "Your command was: " + valueString;
 
             // Call the Move method from PlayerBehvaviour passing the valueString
             GameManager.Listen(valueString);
