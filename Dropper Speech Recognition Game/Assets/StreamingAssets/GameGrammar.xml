@@ -3,16 +3,19 @@
 <grammar xml:lang="en" tag-format="semantics/1.0" version="1.0" xmlns="http://www.w3.org/2001/06/grammar" root="toplevel">
 
     <rule id="toplevel" scope="public">
-        <!-- <one-of> -->
-        <item>
-            <ruleref uri="#playstate" />
-        </item>
-        <!-- </one-of> -->
+        <one-of>
+            <item>
+                <ruleref uri="#playstate" />
+            </item>
+            <item>
+                <ruleref uri="#mainmenustate" />
+            </item>
+        </one-of>
     </rule>
 
     <rule id="playstate">
         <one-of>
-            <item>
+            <!-- <item>
                 <tag>out.action = "start";</tag>
 
                 <one-of>
@@ -45,7 +48,7 @@
                     <item>Stop the game</item>
                     <item>Turn off the game</item>
                 </one-of>
-            </item>
+            </item> -->
 
             <item>
                 <tag>out.action = "pause";</tag>
@@ -144,7 +147,7 @@
                 </one-of>
             </item>
 
-            <item>
+            <!-- <item>
                 <tag>out.action = "color";</tag>
 
                 <one-of>
@@ -186,7 +189,7 @@
                     <item>Go to main menu</item>
                     <item>Go back to the main menu</item>
                 </one-of>
-            </item>
+            </item> -->
 
             <item>
                 <tag>out.action = "restart";</tag>
@@ -197,6 +200,89 @@
                     <item>Start again</item>
                     <item>Give me another chance</item>
                     <item>Let me try again</item>
+                </one-of>
+            </item>
+        </one-of>
+    </rule>
+
+    <rule id="mainmenustate">
+        <one-of>
+            <item>
+                <tag>out.action = "start";</tag>
+
+                <one-of>
+                    <item>Start a new game</item>
+                    <item>Begin a new game</item>
+                    <item>Play a new game</item>
+                    <item>Start the game</item>
+                    <item>New Game</item>
+                    <item>I want to play</item>
+                    <item>Start game</item>
+                    <item>Begin the game</item>
+                    <item>Kick off the game</item>
+                    <item>Let's go</item>
+                    <item>Let's start</item>
+                    <item>Play the game</item>
+                    <item>New game</item>
+                </one-of>
+            </item>
+
+            <item>
+                <tag>out.action = "quit";</tag>
+
+                <one-of>
+                    <item>Quit the game</item>
+                    <item>I give up</item>
+                    <item>Leave the game</item>
+                    <item>Exit the game</item>
+                    <item>I don't want to play anymore</item>
+                    <item>I do not want to play anymore</item>
+                    <item>Stop the game</item>
+                    <item>Turn off the game</item>
+                </one-of>
+            </item>
+
+            <item>
+                <tag>out.action = "color";</tag>
+
+                <one-of>
+                    <item>Change the color of the player</item>
+                    <item>Change color</item>
+                    <item>Change the color</item>
+                    <item>Give me a different color</item>
+                </one-of>
+            </item>
+
+            <item>
+                <tag>out.action = "options";</tag>
+
+                <one-of>
+                    <item>Take me to options</item>
+                    <item>Take me to settings</item>
+                    <item>Go to options</item>
+                    <item>Go to settings</item>
+                    <item>Let me adjust the settings</item>
+                    <item>Let me adjust the options</item>
+                    <item>Take me to game settings</item>
+                    <item>Let me change game settings</item>
+                    <item>I want to change settings</item>
+                    <item>I want to change game options</item>
+                    <item>I want to change game settings</item>
+                </one-of>
+            </item>
+
+            <item>
+                <tag>out.action = "back";</tag>
+
+                <one-of>
+                    <item>Go back</item>
+                    <item>Take me back to Main Menu</item>
+                    <item>Move back</item>
+                    <item>Take me back</item>
+                    <item>I want to go back</item>
+                    <item>Back to main menu</item>
+                    <item>Go to main menu</item>
+                    <item>Go back to the main menu</item>
                 </one-of>
             </item>
         </one-of>

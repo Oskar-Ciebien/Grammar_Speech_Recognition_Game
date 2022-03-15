@@ -720,6 +720,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3066644077624570649, guid: fd6412ca8cff91845bc8499760747216, type: 3}
   m_PrefabInstance: {fileID: 1302697084}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1302697086 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3066644077624570651, guid: fd6412ca8cff91845bc8499760747216, type: 3}
+  m_PrefabInstance: {fileID: 1302697084}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1397056219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -999,6 +1010,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrammarRecogniser
       objectReference: {fileID: 0}
+    - target: {fileID: 247173792308525193, guid: b0499a065c4c5db4dbdc22a10fc62ad1, type: 3}
+      propertyPath: DisplayText
+      value: 
+      objectReference: {fileID: 1302697086}
     - target: {fileID: 247173792308525194, guid: b0499a065c4c5db4dbdc22a10fc62ad1, type: 3}
       propertyPath: m_RootOrder
       value: 4
