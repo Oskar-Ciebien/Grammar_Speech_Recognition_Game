@@ -9,13 +9,12 @@ public class ObstacleSpawner : MonoBehaviour
     public GameObject spawnerPrefab;
 
     // == Private Fields ==
-    public float startingSpawnTime = 3f;
     private float spawnTime;
 
     void Start()
     {
         // Set spawn time
-        spawnTime = startingSpawnTime;
+        spawnTime = GameManager.resetSpawnTime;
     }
 
     void Update()
@@ -35,7 +34,7 @@ public class ObstacleSpawner : MonoBehaviour
             Instantiate(spawnerPrefab, spawnerPositions[randomSpawnPoint].transform.position, transform.rotation);
 
             // Set the spawn time back to the starting time
-            spawnTime = startingSpawnTime;
+            spawnTime = GameManager.resetSpawnTime;
         }
         else // Otherwise
         {

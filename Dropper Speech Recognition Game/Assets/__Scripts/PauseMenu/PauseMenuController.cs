@@ -27,7 +27,7 @@ public class PauseMenuController : MonoBehaviour
         pauseMenu.SetActive(true);
 
         // Pause the Game
-        Time.timeScale = 0f;
+        Time.timeScale = 0;
     }
 
     public static void ResumeGame()
@@ -39,7 +39,7 @@ public class PauseMenuController : MonoBehaviour
         pauseMenu.SetActive(false);
 
         // Resume the Game
-        Time.timeScale = 1f;
+        Time.timeScale = 1;
     }
 
     public static void Mute()

@@ -16,14 +16,39 @@ public class LevelController : MonoBehaviour
         // If score is above the set score for level two
         if (PlayerPrefs.GetInt("Score") >= GameManager.levelTwoScore)
         {
-            // Increase game speed
-            Time.timeScale = GameManager.levelTwoSpeed;
+            if (GameManager.paused == false)
+            {
+                // Set the new game speed
+                Time.timeScale = GameManager.levelTwoSpeed;
+            }
+            else if (GameManager.paused == true)
+            {
+                // Game paused
+                Time.timeScale = 0f;
+            }
+
+            // Set new spawn rate
+            GameManager.resetSpawnTime = 2.5f;
 
             // Set current level test
             currentLevel = "Level 2";
         }
         else // Otherwise
         {
+            if (GameManager.paused == false)
+            {
+                // Set game speed
+                Time.timeScale = GameManager.levelOneSpeed;
+            }
+            else if (GameManager.paused == true)
+            {
+                // Game paused
+                Time.timeScale = 0f;
+            }
+
+            // Set spawn rate
+            GameManager.resetSpawnTime = 3f;
+
             // Set current level test
             currentLevel = "Level 1";
         }

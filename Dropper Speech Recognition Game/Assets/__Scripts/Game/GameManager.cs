@@ -8,8 +8,10 @@ public class GameManager : MonoBehaviour
     public static int startingLives = 3;
     public static int startingScore = 0;
     public static bool paused = false;
+    public static float levelOneSpeed = 1f;
     public static float levelTwoScore = 10f;
     public static float levelTwoSpeed = 2f;
+    public static float resetSpawnTime = 3f;
 
     public static void Listen(string value)
     {
