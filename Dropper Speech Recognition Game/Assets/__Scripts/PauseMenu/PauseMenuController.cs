@@ -20,41 +20,73 @@ public class PauseMenuController : MonoBehaviour
 
     public static void PauseGame()
     {
-        // Set paused to true - Game Paused
-        GameManager.paused = true;
+        // If on the GameScene
+        if (SceneManager.GetActiveScene().name == "GameScene")
+        {
+            // If pause menu is deactivated
+            if (pauseMenu.activeSelf == false)
+            {
+                // Set paused to true - Game Paused
+                GameManager.paused = true;
 
-        // Show the PauseMenu
-        pauseMenu.SetActive(true);
+                // Show the PauseMenu
+                pauseMenu.SetActive(true);
 
-        // Pause the Game
-        Time.timeScale = 0;
+                // Pause the Game
+                Time.timeScale = 0;
+            }
+        }
     }
 
     public static void ResumeGame()
     {
-        // Set paused to false - Game UnPaused
-        GameManager.paused = false;
+        // If on the GameScene
+        if (SceneManager.GetActiveScene().name == "GameScene")
+        {
+            // If pause menu is active
+            if (pauseMenu.activeSelf == true)
+            {
+                // Set paused to false - Game UnPaused
+                GameManager.paused = false;
 
-        // Disable the PauseMenu
-        pauseMenu.SetActive(false);
+                // Disable the PauseMenu
+                pauseMenu.SetActive(false);
 
-        // Resume the Game
-        Time.timeScale = 1;
+                // Resume the Game
+                Time.timeScale = 1;
+            }
+        }
     }
 
     public static void Mute()
     {
-        if (music.mute == false)
+        // If on the GameScene
+        if (SceneManager.GetActiveScene().name == "GameScene")
         {
-            music.mute = true;
+            // If pause menu is active
+            if (pauseMenu.activeSelf == true)
+            {
+                if (music.mute == false)
+                {
+                    music.mute = true;
+                }
+            }
         }
     }
 
     public static void unMute()
     {
-        if (music.mute == true)
+        // If on the GameScene
+        if (SceneManager.GetActiveScene().name == "GameScene")
         {
-            music.mute = false;
+            // If pause menu is active
+            if (pauseMenu.activeSelf == true)
+            {
+                if (music.mute == true)
+                {
+                    music.mute = false;
+                }
+            }
         }
     }
 

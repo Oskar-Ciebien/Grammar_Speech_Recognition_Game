@@ -49,46 +49,54 @@ public class PlayerBehaviour : MonoBehaviour
 
     public static void MoveRight()
     {
-        // If game is not paused
-        if (GameManager.paused == false)
+        // If on the GameScene
+        if (SceneManager.GetActiveScene().name == "GameScene")
         {
-            // Check if player is at the right border
-            if (playerPosition < rightBorder)
+            // If game is not paused
+            if (GameManager.paused == false)
             {
-                // Move player to the right
-                Player.transform.Translate(new Vector2(0, -2));
+                // Check if player is at the right border
+                if (playerPosition < rightBorder)
+                {
+                    // Move player to the right
+                    Player.transform.Translate(new Vector2(0, -2));
 
-                // Change player position
-                playerPosition += 2f;
+                    // Change player position
+                    playerPosition += 2f;
 
-                Debug.Log("Player moved right."); // Used for testing
-            }
-            else // If player is at the border
-            {
-                Debug.Log("Player has reached the right border");
+                    Debug.Log("Player moved right."); // Used for testing
+                }
+                else // If player is at the border
+                {
+                    Debug.Log("Player has reached the right border");
+                }
             }
         }
     }
 
     public static void MoveLeft()
     {
-        // If Game is not paused
-        if (GameManager.paused == false)
+        // If on the GameScene
+        if (SceneManager.GetActiveScene().name == "GameScene")
         {
-            // Check if player is at the left border
-            if (playerPosition > leftBorder)
+            // If Game is not paused
+            if (GameManager.paused == false)
             {
-                // Move player to the left
-                Player.transform.Translate(new Vector2(0, 2));
+                // Check if player is at the left border
+                if (playerPosition > leftBorder)
+                {
+                    // Move player to the left
+                    Player.transform.Translate(new Vector2(0, 2));
 
-                // Change player position
-                playerPosition -= 2f;
+                    // Change player position
+                    playerPosition -= 2f;
 
-                Debug.Log("Player moved left."); // Used for testing
-            }
-            else // If player is at the border
-            {
-                Debug.Log("Player has reached the left border");
+                    Debug.Log("Player moved left."); // Used for testing
+                }
+                else // If player is at the border
+                {
+                    Debug.Log("Player has reached the left border");
+                }
             }
         }
     }
@@ -129,8 +137,6 @@ public class PlayerBehaviour : MonoBehaviour
     // Show the DeathScene - Player Died
     public void DeathScene()
     {
-        // Call ResetPlayer()
-        ResetPlayer();
         // Load the Death Scene
         SceneManager.LoadScene("DeathScene", LoadSceneMode.Single);
     }

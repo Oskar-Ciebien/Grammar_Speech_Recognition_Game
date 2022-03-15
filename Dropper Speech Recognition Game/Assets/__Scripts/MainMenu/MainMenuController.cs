@@ -24,86 +24,106 @@ public class MainMenuController : MonoBehaviour
 
     public static void Play()
     {
-        // If the main menu is active and options menu is not active
-        if (mainMenu.activeSelf == true && optionsMenu.activeSelf == false)
+        // If on the MainMenu
+        if (SceneManager.GetActiveScene().name == "MainMenu")
         {
-            // Reset Lives
-            PlayerPrefs.SetInt("Lives", GameManager.startingLives);
+            // If the main menu is active and options menu is not active
+            if (mainMenu.activeSelf == true && optionsMenu.activeSelf == false)
+            {
+                // Reset Lives
+                PlayerPrefs.SetInt("Lives", GameManager.startingLives);
 
-            // Reset Score
-            PlayerPrefs.SetInt("Score", GameManager.startingScore);
+                // Reset Score
+                PlayerPrefs.SetInt("Score", GameManager.startingScore);
 
-            // Loads the gamescene and begins the game
-            SceneManager.LoadScene("GameScene");
+                // Loads the gamescene and begins the game
+                SceneManager.LoadScene("GameScene");
 
-            print("Game Started!");
+                print("Game Started!");
+            }
         }
     }
 
     public static void Options()
     {
-        // If the main menu is active and options menu is not active
-        if (mainMenu.activeSelf == true && optionsMenu.activeSelf == false)
+        // If on the MainMenu
+        if (SceneManager.GetActiveScene().name == "MainMenu")
         {
-            // Disable Main Menu
-            mainMenu.SetActive(false);
+            // If the main menu is active and options menu is not active
+            if (mainMenu.activeSelf == true && optionsMenu.activeSelf == false)
+            {
+                // Disable Main Menu
+                mainMenu.SetActive(false);
 
-            // Enable options menu
-            optionsMenu.SetActive(true);
+                // Enable options menu
+                optionsMenu.SetActive(true);
 
-            print("Options Menu!");
+                print("Options Menu!");
+            }
         }
     }
 
     public static void ChangeColour()
     {
-        // If the main menu is not active and options menu is active
-        if (mainMenu.activeSelf == false && optionsMenu.activeSelf == true)
+        // If on the MainMenu
+        if (SceneManager.GetActiveScene().name == "MainMenu")
         {
-            // Get random RGB
-            r = (Random.Range(50.0f, 150.0f)) / 255;
-            g = (Random.Range(50.0f, 150.0f)) / 255;
-            b = (Random.Range(50.0f, 150.0f)) / 255;
+            // If the main menu is not active and options menu is active
+            if (mainMenu.activeSelf == false && optionsMenu.activeSelf == true)
+            {
+                // Get random RGB
+                r = (Random.Range(50.0f, 150.0f)) / 255;
+                g = (Random.Range(50.0f, 150.0f)) / 255;
+                b = (Random.Range(50.0f, 150.0f)) / 255;
 
-            // Set them to Player Prefs
-            PlayerPrefs.SetFloat("ColourR", r);
-            PlayerPrefs.SetFloat("ColourG", g);
-            PlayerPrefs.SetFloat("ColourB", b);
+                // Set them to Player Prefs
+                PlayerPrefs.SetFloat("ColourR", r);
+                PlayerPrefs.SetFloat("ColourG", g);
+                PlayerPrefs.SetFloat("ColourB", b);
 
-            // Set the player colour on the MainMenu Scene
-            playerPrefab.GetComponent<SpriteRenderer>().color = new Color(r, g, b, 1.0f);
+                // Set the player colour on the MainMenu Scene
+                playerPrefab.GetComponent<SpriteRenderer>().color = new Color(r, g, b, 1.0f);
 
-            // Print out the colour
-            // print("Player Colour " + playerPrefab.GetComponent<SpriteRenderer>().color);
+                // Print out the colour
+                // print("Player Colour " + playerPrefab.GetComponent<SpriteRenderer>().color);
 
-            print("Changed Colour!");
+                print("Changed Colour!");
+            }
         }
     }
 
     public static void Back()
     {
-        // If the main menu is not active and options menu is active
-        if (mainMenu.activeSelf == false && optionsMenu.activeSelf == true)
+        // If on the MainMenu
+        if (SceneManager.GetActiveScene().name == "MainMenu")
         {
-            // Enable Main Menu
-            mainMenu.SetActive(true);
+            // If the main menu is not active and options menu is active
+            if (mainMenu.activeSelf == false && optionsMenu.activeSelf == true)
+            {
+                // Enable Main Menu
+                mainMenu.SetActive(true);
 
-            // Disable Options Menu
-            optionsMenu.SetActive(false);
+                // Disable Options Menu
+                optionsMenu.SetActive(false);
 
-            print("Back to Main Menu!");
+                print("Back to Main Menu!");
+            }
         }
     }
 
     public static void Exit()
     {
-        // If the main menu is active and options menu is not active
-        if (mainMenu.activeSelf == true && optionsMenu.activeSelf == false)
+        // If on the MainMenu
+        if (SceneManager.GetActiveScene().name == "MainMenu")
         {
-            // Quits the game
-            Application.Quit();
+            // If the main menu is active and options menu is not active
+            if (mainMenu.activeSelf == true && optionsMenu.activeSelf == false)
+            {
+                // Quits the game
+                Application.Quit();
 
-            print("Quit the game!");
+                print("Quit the game!");
+            }
         }
     }
 
