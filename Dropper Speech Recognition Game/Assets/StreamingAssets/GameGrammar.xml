@@ -10,12 +10,70 @@
             <item>
                 <ruleref uri="#mainmenustate" />
             </item>
+            <item>
+                <ruleref uri="#pausestate" />
+            </item>
+            <item>
+                <ruleref uri="#deathstate" />
+            </item>
+            <item>
+                <ruleref uri="#optionsstate" />
+            </item>
         </one-of>
     </rule>
 
     <rule id="playstate">
         <one-of>
-            <!-- <item>
+            <item>
+                <tag>out.action = "powerup";</tag>
+
+                <one-of>
+                    <item>Give me a power up</item>
+                    <item>Power up now</item>
+                </one-of>
+            </item>
+
+            <item>
+                <tag>out.action = "left";</tag>
+
+                <one-of>
+                    <item>Move to the left</item>
+                    <item>Move left</item>
+                    <item>Go to the left</item>
+                    <item>Go left</item>
+                    <item>Proceed left</item>
+                    <item>Shift left</item>
+                    <item>Shift to the left</item>
+                    <item>Travel left</item>
+                    <item>Travel to the left</item>
+                    <item>Change position to the left</item>
+                    <item>Jump to the left</item>
+                </one-of>
+            </item>
+
+            <item>
+                <tag>out.action = "right";</tag>
+
+                <one-of>
+                    <item>Move to the right</item>
+                    <item>Move right</item>
+                    <item>Go to the right</item>
+                    <item>Go right</item>
+                    <item>Proceed right</item>
+                    <item>Shift right</item>
+                    <item>Shift to the right</item>
+                    <item>Travel right</item>
+                    <item>Travel to the right</item>
+                    <item>Change position to the right</item>
+                    <item>Jump to the right</item>
+                </one-of>
+            </item>
+        </one-of>
+    </rule>
+
+    <rule id="mainmenustate">
+        <one-of>
+            <item>
                 <tag>out.action = "start";</tag>
 
                 <one-of>
@@ -48,8 +106,60 @@
                     <item>Stop the game</item>
                     <item>Turn off the game</item>
                 </one-of>
-            </item> -->
+            </item>
 
+            <item>
+                <tag>out.action = "options";</tag>
+
+                <one-of>
+                    <item>Take me to options</item>
+                    <item>Take me to settings</item>
+                    <item>Go to options</item>
+                    <item>Go to settings</item>
+                    <item>Let me adjust the settings</item>
+                    <item>Let me adjust the options</item>
+                    <item>Take me to game settings</item>
+                    <item>Let me change game settings</item>
+                    <item>I want to change settings</item>
+                    <item>I want to change game options</item>
+                    <item>I want to change game settings</item>
+                </one-of>
+            </item>
+        </one-of>
+    </rule>
+
+    <rule id="optionsstate">
+        <one-of>
+            <item>
+                <tag>out.action = "color";</tag>
+
+                <one-of>
+                    <item>Change the color of the player</item>
+                    <item>Change color</item>
+                    <item>Change the color</item>
+                    <item>Give me a different color</item>
+                </one-of>
+            </item>
+
+            <item>
+                <tag>out.action = "back";</tag>
+
+                <one-of>
+                    <item>Go back</item>
+                    <item>Take me back to Main Menu</item>
+                    <item>Move back</item>
+                    <item>Take me back</item>
+                    <item>I want to go back</item>
+                    <item>Back to main menu</item>
+                    <item>Go to main menu</item>
+                    <item>Go back to the main menu</item>
+                </one-of>
+            </item>
+        </one-of>
+    </rule>
+
+    <rule id="pausestate">
+        <one-of>
             <item>
                 <tag>out.action = "pause";</tag>
 
@@ -101,96 +211,11 @@
                     <item>Sound effects on</item>
                 </one-of>
             </item>
+        </one-of>
+    </rule>
 
-            <item>
-                <tag>out.action = "powerup";</tag>
-
-                <one-of>
-                    <item>Give me a power up</item>
-                    <item>Power up now</item>
-                </one-of>
-            </item>
-
-            <item>
-                <tag>out.action = "left";</tag>
-
-                <one-of>
-                    <item>Move to the left</item>
-                    <item>Move left</item>
-                    <item>Go to the left</item>
-                    <item>Go left</item>
-                    <item>Proceed left</item>
-                    <item>Shift left</item>
-                    <item>Shift to the left</item>
-                    <item>Travel left</item>
-                    <item>Travel to the left</item>
-                    <item>Change position to the left</item>
-                    <item>Jump to the left</item>
-                </one-of>
-            </item>
-
-            <item>
-                <tag>out.action = "right";</tag>
-
-                <one-of>
-                    <item>Move to the right</item>
-                    <item>Move right</item>
-                    <item>Go to the right</item>
-                    <item>Go right</item>
-                    <item>Proceed right</item>
-                    <item>Shift right</item>
-                    <item>Shift to the right</item>
-                    <item>Travel right</item>
-                    <item>Travel to the right</item>
-                    <item>Change position to the right</item>
-                    <item>Jump to the right</item>
-                </one-of>
-            </item>
-
-            <!-- <item>
-                <tag>out.action = "color";</tag>
-
-                <one-of>
-                    <item>Change the color of the player</item>
-                    <item>Change color</item>
-                    <item>Change the color</item>
-                    <item>Give me a different color</item>
-                </one-of>
-            </item>
-
-            <item>
-                <tag>out.action = "options";</tag>
-
-                <one-of>
-                    <item>Take me to options</item>
-                    <item>Take me to settings</item>
-                    <item>Go to options</item>
-                    <item>Go to settings</item>
-                    <item>Let me adjust the settings</item>
-                    <item>Let me adjust the options</item>
-                    <item>Take me to game settings</item>
-                    <item>Let me change game settings</item>
-                    <item>I want to change settings</item>
-                    <item>I want to change game options</item>
-                    <item>I want to change game settings</item>
-                </one-of>
-            </item>
-
-            <item>
-                <tag>out.action = "back";</tag>
-
-                <one-of>
-                    <item>Go back</item>
-                    <item>Take me back to Main Menu</item>
-                    <item>Move back</item>
-                    <item>Take me back</item>
-                    <item>I want to go back</item>
-                    <item>Back to main menu</item>
-                    <item>Go to main menu</item>
-                    <item>Go back to the main menu</item>
-                </one-of>
-            </item> -->
-
+    <rule id="deathstate">
+        <one-of>
             <item>
                 <tag>out.action = "restart";</tag>
 
@@ -200,89 +225,6 @@
                     <item>Start again</item>
                     <item>Give me another chance</item>
                     <item>Let me try again</item>
-                </one-of>
-            </item>
-        </one-of>
-    </rule>
-
-    <rule id="mainmenustate">
-        <one-of>
-            <item>
-                <tag>out.action = "start";</tag>
-
-                <one-of>
-                    <item>Start a new game</item>
-                    <item>Begin a new game</item>
-                    <item>Play a new game</item>
-                    <item>Start the game</item>
-                    <item>New Game</item>
-                    <item>I want to play</item>
-                    <item>Start game</item>
-                    <item>Begin the game</item>
-                    <item>Kick off the game</item>
-                    <item>Let's go</item>
-                    <item>Let's start</item>
-                    <item>Play the game</item>
-                    <item>New game</item>
-                </one-of>
-            </item>
-
-            <item>
-                <tag>out.action = "quit";</tag>
-
-                <one-of>
-                    <item>Quit the game</item>
-                    <item>I give up</item>
-                    <item>Leave the game</item>
-                    <item>Exit the game</item>
-                    <item>I don't want to play anymore</item>
-                    <item>I do not want to play anymore</item>
-                    <item>Stop the game</item>
-                    <item>Turn off the game</item>
-                </one-of>
-            </item>
-
-            <item>
-                <tag>out.action = "color";</tag>
-
-                <one-of>
-                    <item>Change the color of the player</item>
-                    <item>Change color</item>
-                    <item>Change the color</item>
-                    <item>Give me a different color</item>
-                </one-of>
-            </item>
-
-            <item>
-                <tag>out.action = "options";</tag>
-
-                <one-of>
-                    <item>Take me to options</item>
-                    <item>Take me to settings</item>
-                    <item>Go to options</item>
-                    <item>Go to settings</item>
-                    <item>Let me adjust the settings</item>
-                    <item>Let me adjust the options</item>
-                    <item>Take me to game settings</item>
-                    <item>Let me change game settings</item>
-                    <item>I want to change settings</item>
-                    <item>I want to change game options</item>
-                    <item>I want to change game settings</item>
-                </one-of>
-            </item>
-
-            <item>
-                <tag>out.action = "back";</tag>
-
-                <one-of>
-                    <item>Go back</item>
-                    <item>Take me back to Main Menu</item>
-                    <item>Move back</item>
-                    <item>Take me back</item>
-                    <item>I want to go back</item>
-                    <item>Back to main menu</item>
-                    <item>Go to main menu</item>
-                    <item>Go back to the main menu</item>
                 </one-of>
             </item>
         </one-of>
