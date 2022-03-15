@@ -25,15 +25,6 @@
     <rule id="playstate">
         <one-of>
             <item>
-                <tag>out.action = "powerup";</tag>
-
-                <one-of>
-                    <item>Give me a power up</item>
-                    <item>Power up now</item>
-                </one-of>
-            </item>
-
-            <item>
                 <tag>out.action = "left";</tag>
 
                 <one-of>
