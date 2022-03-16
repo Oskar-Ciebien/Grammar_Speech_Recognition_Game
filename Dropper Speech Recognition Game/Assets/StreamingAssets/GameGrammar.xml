@@ -5,7 +5,10 @@
     <rule id="toplevel" scope="public">
         <one-of>
             <item>
-                <ruleref uri="#playstate" />
+                <ruleref uri="#gamestate" />
+            </item>
+            <item>
+                <ruleref uri="#movement" />
             </item>
             <item>
                 <ruleref uri="#mainmenustate" />
@@ -22,7 +25,24 @@
         </one-of>
     </rule>
 
-    <rule id="playstate">
+    <rule id="gamestate">
+        <one-of>
+            <item>
+                <tag>out.action = "pause";</tag>
+
+                <one-of>
+                    <item>Pause the game</item>
+                    <item>Stop the game</item>
+                    <item>Wait a minute</item>
+                    <item>Stop for a second</item>
+                    <item>Give me a break</item>
+                    <item>Freeze the game</item>
+                </one-of>
+            </item>
+        </one-of>
+    </rule>
+
+    <rule id="movement">
         <one-of>
             <item>
                 <tag>out.action = "left";</tag>
@@ -151,19 +171,6 @@
 
     <rule id="pausestate">
         <one-of>
-            <item>
-                <tag>out.action = "pause";</tag>
-
-                <one-of>
-                    <item>Pause the game</item>
-                    <item>Stop the game</item>
-                    <item>Wait a minute</item>
-                    <item>Stop for a second</item>
-                    <item>Give me a break</item>
-                    <item>Freeze the game</item>
-                </one-of>
-            </item>
-
             <item>
                 <tag>out.action = "unpause";</tag>
 
