@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public static float levelOneSpeed = 1f;
     public static float levelTwoScore = 10f;
     public static float levelTwoSpeed = 2f;
+    public static float startingSpawnTime = 3f;
     public static float resetSpawnTime = 3f;
 
     public static void Listen(string value)

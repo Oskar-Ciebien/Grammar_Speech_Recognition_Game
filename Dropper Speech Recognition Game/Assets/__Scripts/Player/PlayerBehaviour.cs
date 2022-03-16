@@ -43,8 +43,12 @@ public class PlayerBehaviour : MonoBehaviour
     {
         // Set the lives left to the default amount
         PlayerPrefs.SetInt("Score", GameManager.startingScore);
+
         // Set the lives left to the default amount
         PlayerPrefs.SetInt("Lives", GameManager.startingLives);
+
+        // Reset spawn time
+        GameManager.resetSpawnTime = GameManager.startingSpawnTime;
     }
 
     public static void MoveRight()
@@ -108,6 +112,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             // Take one life
             lives--;
+
             // Set the new lives
             PlayerPrefs.SetInt("Lives", lives);
 
