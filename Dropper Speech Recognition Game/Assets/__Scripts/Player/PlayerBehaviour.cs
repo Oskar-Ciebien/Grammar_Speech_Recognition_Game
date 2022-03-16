@@ -13,7 +13,7 @@ public class PlayerBehaviour : MonoBehaviour
     private static float rightBorder = 2f;
     private static float playerPosition;
     private int lives;
-    private float reloadTime = 2.0f;
+    private float reloadTime = 1.0f;
     private string playerColourStr;
     private float r;
     private float g;
