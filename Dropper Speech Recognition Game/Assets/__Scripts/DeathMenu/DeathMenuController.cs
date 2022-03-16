@@ -17,4 +17,19 @@ public class DeathMenuController : MonoBehaviour
             SceneManager.LoadScene("MainMenu");
         }
     }
+
+    public static void Quit()
+    {
+        // Set current scene
+        Scene scene = SceneManager.GetActiveScene();
+
+        // If on DeathScene
+        if (scene.name == "DeathScene")
+        {
+            print("Quit the game from Death Scene!");
+
+            // Quits the game
+            Application.Quit();
+        }
+    }
 }

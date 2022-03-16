@@ -119,10 +119,10 @@ public class MainMenuController : MonoBehaviour
             // If the main menu is active and options menu is not active
             if (mainMenu.activeSelf == true && optionsMenu.activeSelf == false)
             {
+                print("Quit the game from Main Menu!");
+
                 // Quits the game
                 Application.Quit();
-
-                print("Quit the game!");
             }
         }
     }
