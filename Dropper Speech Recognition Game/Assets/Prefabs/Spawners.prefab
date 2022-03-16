@@ -110,8 +110,7 @@ MonoBehaviour:
   - {fileID: 1264170728209982464}
   - {fileID: 1264170726872975610}
   - {fileID: 1264170726959829569}
-  spawnerPrefab: {fileID: 2900047658244850227, guid: c2ebcbb4416b7d24b85e81f37cfce1dd, type: 3}
-  startingSpawnTime: 3
+  spawnerPrefab: {fileID: 1338763429128873487, guid: 2e9ee4c12580ded47ae770dbb42202e7, type: 3}
 --- !u!1 &1264170728209982464
 GameObject:
   m_ObjectHideFlags: 0
