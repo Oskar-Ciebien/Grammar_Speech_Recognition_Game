@@ -466,7 +466,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 494673828}
         m_TargetAssemblyTypeName: DeathMenuController, Assembly-CSharp
-        m_MethodName: GoMainMenu
+        m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

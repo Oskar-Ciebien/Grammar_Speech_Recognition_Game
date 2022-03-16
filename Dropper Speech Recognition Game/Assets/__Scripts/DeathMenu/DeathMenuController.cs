@@ -30,6 +30,9 @@ public class DeathMenuController : MonoBehaviour
 
             // Quits the game
             Application.Quit();
+
+            // Quits the editor
+            UnityEditor.EditorApplication.isPlaying = false;
         }
     }
 }

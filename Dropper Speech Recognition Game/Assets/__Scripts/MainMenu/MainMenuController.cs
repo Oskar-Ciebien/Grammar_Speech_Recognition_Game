@@ -123,6 +123,9 @@ public class MainMenuController : MonoBehaviour
 
                 // Quits the game
                 Application.Quit();
+
+                // Quits the editor
+                UnityEditor.EditorApplication.isPlaying = false;
             }
         }
     }
