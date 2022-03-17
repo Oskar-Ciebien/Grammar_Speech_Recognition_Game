@@ -42,6 +42,11 @@
                     <item>Stop for a second</item>
                     <item>Give me a break</item>
                     <item>Freeze the game</item>
+                    <item>Pause game</item>
+                    <item>Stop the game</item>
+                    <item>Stop for a second</item>
+                    <item>Stop game</item>
+                    <item>Stop for a moment</item>
                 </one-of>
             </item>
         </one-of>
@@ -63,6 +68,8 @@
                     <item>Travel left</item>
                     <item>Travel to the left</item>
                     <item>Change position to the left</item>
+                    <item>Change to the left side</item>
+                    <item>Move to the left side</item>
                     <item>Jump to the left</item>
                 </one-of>
             </item>
@@ -81,6 +88,8 @@
                     <item>Travel right</item>
                     <item>Travel to the right</item>
                     <item>Change position to the right</item>
+                    <item>Change to the right side</item>
+                    <item>Move to the right side</item>
                     <item>Jump to the right</item>
                 </one-of>
             </item>
@@ -97,7 +106,7 @@
                     <item>Begin a new game</item>
                     <item>Play a new game</item>
                     <item>Start the game</item>
-                    <item>New Game</item>
+                    <item>New game</item>
                     <item>I want to play</item>
                     <item>Start game</item>
                     <item>Begin the game</item>
@@ -106,6 +115,7 @@
                     <item>Let's start</item>
                     <item>Play the game</item>
                     <item>New game</item>
+                    <item>Play game</item>
                 </one-of>
             </item>
 
@@ -121,6 +131,11 @@
                     <item>I do not want to play anymore</item>
                     <item>Stop the game</item>
                     <item>Turn off the game</item>
+                    <item>Quit game</item>
+                    <item>Leave game</item>
+                    <item>Exit game</item>
+                    <item>Don't want to play anymore</item>
+                    <item>Turn off game</item>
                 </one-of>
             </item>
 
@@ -154,6 +169,14 @@
                     <item>Change color</item>
                     <item>Change the color</item>
                     <item>Give me a different color</item>
+                    <item>Change the player color</item>
+                    <item>Change my color</item>
+                    <item>Change the ship color</item>
+                    <item>I want a different color</item>
+                    <item>Change the look of my ship</item>
+                    <item>Change the look of my spaceship</item>
+                    <item>Change the colour of my spaceship</item>
+                    <item>This ship is ugly</item>
                 </one-of>
             </item>
 
@@ -185,6 +208,8 @@
                     <item>Unfreeze the game</item>
                     <item>Continue on with the game</item>
                     <item>Continue the game</item>
+                    <item>Take me back to the game</item>
+                    <item>I want to continue playing</item>
                 </one-of>
             </item>
 
@@ -198,6 +223,12 @@
                     <item>Sound off</item>
                     <item>Sounds off</item>
                     <item>Sound effects off</item>
+                    <item>Turn off the sounds</item>
+                    <item>Turn off the music</item>
+                    <item>Turn off the sound effects</item>
+                    <item>Disable sounds</item>
+                    <item>Disable sound effects</item>
+                    <item>This is too loud</item>
                 </one-of>
             </item>
 
@@ -212,6 +243,15 @@
                     <item>Sound on</item>
                     <item>Sounds on</item>
                     <item>Sound effects on</item>
+                    <item>Turn on the sound effects</item>
+                    <item>Turn the music back on</item>
+                    <item>Turn on the music</item>
+                    <item>Turn on the sounds</item>
+                    <item>Turn the sounds back on</item>
+                    <item>Enable sounds</item>
+                    <item>Enable sound effects</item>
+                    <item>Enable music</item>
+                    <item>Enable the music</item>
                 </one-of>
             </item>
         </one-of>
@@ -228,6 +268,9 @@
                     <item>Start again</item>
                     <item>Give me another chance</item>
                     <item>Let me try again</item>
+                    <item>I want to go again</item>
+                    <item>I want to play again</item>
+                    <item>Start the game again</item>
                 </one-of>
             </item>
         </one-of>
