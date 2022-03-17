@@ -39,6 +39,7 @@ public class PlayerBehaviour : MonoBehaviour
         Player.GetComponent<SpriteRenderer>().color = new Color(r, g, b, 1f);
     }
 
+    // Resets the player statistics and other needed variables for a new game
     void ResetPlayer()
     {
         // Set the lives left to the default amount
@@ -51,6 +52,7 @@ public class PlayerBehaviour : MonoBehaviour
         GameManager.resetSpawnTime = GameManager.startingSpawnTime;
     }
 
+    // Moves player to the right
     public static void MoveRight()
     {
         // If on the GameScene
@@ -68,16 +70,17 @@ public class PlayerBehaviour : MonoBehaviour
                     // Change player position
                     playerPosition += 2f;
 
-                    Debug.Log("Player moved right."); // Used for testing
+                    // print("Player moved right."); // Used for testing
                 }
                 else // If player is at the border
                 {
-                    Debug.Log("Player has reached the right border");
+                    // print("Player has reached the right border"); // Used for testing
                 }
             }
         }
     }
 
+    // Moves player to the left
     public static void MoveLeft()
     {
         // If on the GameScene
@@ -95,19 +98,22 @@ public class PlayerBehaviour : MonoBehaviour
                     // Change player position
                     playerPosition -= 2f;
 
-                    Debug.Log("Player moved left."); // Used for testing
+                    // print("Player moved left."); // Used for testing
                 }
                 else // If player is at the border
                 {
-                    Debug.Log("Player has reached the left border");
+                    // print("Player has reached the left border"); // Used for testing
                 }
             }
         }
     }
 
+    // On Collision
     private void OnCollisionEnter2D(Collision2D other)
     {
-        print("Collision! " + other);
+        // print("Collision! " + other); // Used for testing
+
+        // If player collided with the obstacle
         if (other.gameObject.tag == "Obstacle")
         {
             // Take one life
@@ -116,7 +122,7 @@ public class PlayerBehaviour : MonoBehaviour
             // Set the new lives
             PlayerPrefs.SetInt("Lives", lives);
 
-            print("Lives: " + lives); // Used for testing
+            // print("Lives: " + lives); // Used for testing
 
             // If no more lives left
             if (lives <= 0)
@@ -124,7 +130,7 @@ public class PlayerBehaviour : MonoBehaviour
                 Invoke("DeathScene", reloadTime);
             else // Otherwise
             {
-                print("Player Died"); // Used for testing
+                // print("Player Died"); // Used for testing
 
                 // Call a method to restart the scene
                 Invoke("RestartScene", reloadTime);
@@ -145,4 +151,4 @@ public class PlayerBehaviour : MonoBehaviour
         // Load the Death Scene
         SceneManager.LoadScene("DeathScene", LoadSceneMode.Single);
     }
-}
+} // Class - END

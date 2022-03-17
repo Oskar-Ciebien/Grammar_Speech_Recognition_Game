@@ -11,6 +11,7 @@ public class RegisterScoreText : MonoBehaviour
         RegisterScore();
     }
 
+    // Registers the score to the text component
     public void RegisterScore()
     {
         // Display the Score from GameData on Screen

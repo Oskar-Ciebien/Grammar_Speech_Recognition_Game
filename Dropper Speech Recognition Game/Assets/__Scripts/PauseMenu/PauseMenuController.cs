@@ -12,12 +12,15 @@ public class PauseMenuController : MonoBehaviour
 
     private void Start()
     {
+        // Set the pause menu and game music game objects
         pauseMenu = FindIncludingInactive("PauseMenu"); // Disabled by default, so have to go through all objects in game
         gameMusic = GameObject.Find("GameMusic");
 
+        // Set the music to the AudioSource of GameMusic object
         music = gameMusic.GetComponent<AudioSource>();
     }
 
+    // Pauses the game
     public static void PauseGame()
     {
         // If on the GameScene
@@ -38,6 +41,7 @@ public class PauseMenuController : MonoBehaviour
         }
     }
 
+    // Unpauses / Resumes the game
     public static void ResumeGame()
     {
         // If on the GameScene
@@ -58,6 +62,7 @@ public class PauseMenuController : MonoBehaviour
         }
     }
 
+    // Mutes the game sounds / music
     public static void Mute()
     {
         // If on the GameScene
@@ -66,14 +71,17 @@ public class PauseMenuController : MonoBehaviour
             // If pause menu is active
             if (pauseMenu.activeSelf == true)
             {
+                // If the music is not muted
                 if (music.mute == false)
                 {
+                    // Mute the music
                     music.mute = true;
                 }
             }
         }
     }
 
+    // Unmutes the game sounds / music
     public static void unMute()
     {
         // If on the GameScene
@@ -82,8 +90,10 @@ public class PauseMenuController : MonoBehaviour
             // If pause menu is active
             if (pauseMenu.activeSelf == true)
             {
+                // If the music is muted
                 if (music.mute == true)
                 {
+                    // Unmute the music
                     music.mute = false;
                 }
             }
@@ -123,4 +133,4 @@ public class PauseMenuController : MonoBehaviour
 
         return null;
     }
-}
+} // Class - END

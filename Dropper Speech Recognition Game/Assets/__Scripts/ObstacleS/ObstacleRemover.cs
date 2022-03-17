@@ -6,6 +6,7 @@ public class ObstacleRemover : MonoBehaviour
 {
     // == Private Fields ==
     private float position = -7.6f;
+
     void Update()
     {
         // If the obstacles crossed the position
@@ -18,4 +19,4 @@ public class ObstacleRemover : MonoBehaviour
             GameData.UpdateScore(1);
         }
     }
-}
+} // Class - END

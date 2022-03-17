@@ -55,13 +55,15 @@ public class GameData : MonoBehaviour
         livesText.text = PlayerPrefs.GetInt("Lives").ToString();
 
         // print(score); // Used for testing
-        print(PlayerPrefs.GetInt("Score")); // Used for testing
+        // print(PlayerPrefs.GetInt("Score")); // Used for testing
     } // Awake END
 
     // Updates the Score on the screen
     public static void UpdateScore(int s)
     {
+        // Get the score from player prefs
         score = PlayerPrefs.GetInt("Score");
+
         // Update the score into PlayerPrefs
         PlayerPrefs.SetInt("Score", score += s);
     } // UpdateScore END

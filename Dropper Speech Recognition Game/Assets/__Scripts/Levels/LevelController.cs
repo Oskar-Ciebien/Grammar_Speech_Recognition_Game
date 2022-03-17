@@ -16,14 +16,16 @@ public class LevelController : MonoBehaviour
         // If score is above the set score for level two
         if (PlayerPrefs.GetInt("Score") >= GameManager.levelTwoScore)
         {
+            // If Game is not paused
             if (GameManager.paused == false)
             {
                 // Set the new game speed
                 Time.timeScale = GameManager.levelTwoSpeed;
             }
+            // Otherwise if game is paused
             else if (GameManager.paused == true)
             {
-                // Game paused
+                // Freeze the game
                 Time.timeScale = 0f;
             }
 
@@ -35,14 +37,16 @@ public class LevelController : MonoBehaviour
         }
         else // Otherwise
         {
+            // If the game is not paused
             if (GameManager.paused == false)
             {
                 // Set game speed
                 Time.timeScale = GameManager.levelOneSpeed;
             }
+            // Otherwise if the game is paused
             else if (GameManager.paused == true)
             {
-                // Game paused
+                // Freeze the game
                 Time.timeScale = 0f;
             }
 
@@ -56,4 +60,4 @@ public class LevelController : MonoBehaviour
         // Display level on the Screen
         levelText.text = currentLevel.ToString();
     }
-}
+} // Class - END

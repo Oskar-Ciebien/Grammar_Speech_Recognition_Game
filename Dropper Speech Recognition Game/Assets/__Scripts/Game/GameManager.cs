@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public static float startingSpawnTime = 3f;
     public static float resetSpawnTime = 3f;
 
+    // Checks for the keywords from Grammar Recogniser Script
     public static void Listen(string value)
     {
         // If command is to move left
@@ -90,4 +91,4 @@ public class GameManager : MonoBehaviour
             DeathMenuController.GoMainMenu();
         }
     }
-}
+} // Class - END

@@ -19,9 +19,11 @@ public class ObstacleSpawner : MonoBehaviour
 
     void Update()
     {
+        // Call SpawnObstacle
         SpawnObstacle();
     }
 
+    // Spawn an obstacle at random location
     void SpawnObstacle()
     {
         // If spawn time has reached 0 or less
@@ -42,4 +44,4 @@ public class ObstacleSpawner : MonoBehaviour
             spawnTime -= Time.deltaTime;
         }
     }
-}
+} // Class - END

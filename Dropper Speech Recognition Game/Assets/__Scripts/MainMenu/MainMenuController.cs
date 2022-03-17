@@ -22,6 +22,7 @@ public class MainMenuController : MonoBehaviour
         playerPrefab = GameObject.Find("Player");
     }
 
+    // Starts the game
     public static void Play()
     {
         // If on the MainMenu
@@ -39,11 +40,12 @@ public class MainMenuController : MonoBehaviour
                 // Loads the gamescene and begins the game
                 SceneManager.LoadScene("GameScene");
 
-                print("Game Started!");
+                // print("Game Started!"); // Used for testing
             }
         }
     }
 
+    // Options menu
     public static void Options()
     {
         // If on the MainMenu
@@ -58,11 +60,12 @@ public class MainMenuController : MonoBehaviour
                 // Enable options menu
                 optionsMenu.SetActive(true);
 
-                print("Options Menu!");
+                // print("Options Menu!"); // Used for testing
             }
         }
     }
 
+    // Change the colour of the player
     public static void ChangeColour()
     {
         // If on the MainMenu
@@ -87,11 +90,12 @@ public class MainMenuController : MonoBehaviour
                 // Print out the colour
                 // print("Player Colour " + playerPrefab.GetComponent<SpriteRenderer>().color);
 
-                print("Changed Colour!");
+                // print("Changed Colour!"); // Used for testing
             }
         }
     }
 
+    // Moves back to the main menu
     public static void Back()
     {
         // If on the MainMenu
@@ -106,11 +110,12 @@ public class MainMenuController : MonoBehaviour
                 // Disable Options Menu
                 optionsMenu.SetActive(false);
 
-                print("Back to Main Menu!");
+                // print("Back to Main Menu!"); // Used for testing
             }
         }
     }
 
+    // Quits the game and editor
     public static void Exit()
     {
         // If on the MainMenu
@@ -119,7 +124,7 @@ public class MainMenuController : MonoBehaviour
             // If the main menu is active and options menu is not active
             if (mainMenu.activeSelf == true && optionsMenu.activeSelf == false)
             {
-                print("Quit the game from Main Menu!");
+                // print("Quit the game from Main Menu!"); // Used for testing
 
                 // Quits the game
                 Application.Quit();
@@ -163,4 +168,4 @@ public class MainMenuController : MonoBehaviour
 
         return null;
     }
-}
+} // Class - END

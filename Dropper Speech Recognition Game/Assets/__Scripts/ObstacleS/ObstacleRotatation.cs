@@ -12,4 +12,4 @@ public class ObstacleRotatation : MonoBehaviour
         // Rotate Obstacle
         gameObject.transform.Rotate(0, 0, rotation);
     }
-}
+} // Class - END

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DeathMenuController : MonoBehaviour
 {
+    // Goes back to the main menu
     public static void GoMainMenu()
     {
         // Set current scene
@@ -18,6 +19,7 @@ public class DeathMenuController : MonoBehaviour
         }
     }
 
+    // Quits the Game and Editor
     public static void Quit()
     {
         // Set current scene
@@ -26,7 +28,7 @@ public class DeathMenuController : MonoBehaviour
         // If on DeathScene
         if (scene.name == "DeathScene")
         {
-            print("Quit the game from Death Scene!");
+            // print("Quit the game from Death Scene!"); // Used for testing
 
             // Quits the game
             Application.Quit();
@@ -35,4 +37,4 @@ public class DeathMenuController : MonoBehaviour
             UnityEditor.EditorApplication.isPlaying = false;
         }
     }
-}
+} // Class - END

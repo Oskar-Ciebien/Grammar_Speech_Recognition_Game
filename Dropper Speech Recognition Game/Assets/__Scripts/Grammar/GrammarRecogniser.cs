@@ -9,9 +9,10 @@ using UnityEngine.UI;
 public class GrammarRecogniser : MonoBehaviour
 {
     // === Private Fields ===
-    private const string GRAMMAR_XML_FILE = "GameGrammar.xml";
     [SerializeField] private Text DisplayText;
+    private const string GRAMMAR_XML_FILE = "GameGrammar.xml";
 
+    // Grammar Recogniser
     GrammarRecognizer gr;
 
     private void Start()
@@ -21,30 +22,37 @@ public class GrammarRecogniser : MonoBehaviour
                 Path.Combine(Application.streamingAssetsPath, GRAMMAR_XML_FILE),
                 ConfidenceLevel.Low);
 
-        Debug.Log("[!] Grammar has loaded " + gr.GrammarFilePath + ".");
+        // print("[!] Grammar has loaded " + gr.GrammarFilePath + "."); // Used for testing
 
         gr.OnPhraseRecognized += GR_OnPhrasesRecognised;
 
+        // Start the grammar recogniser
         gr.Start();
 
-        if (gr.IsRunning) Debug.Log("[!] GR is running.");
+        // Inform if grammar recogniser is running
+        if (gr.IsRunning) print("[!] GR is running.");
     }
 
     private void GR_OnPhrasesRecognised(PhraseRecognizedEventArgs args)
     {
-        Debug.Log("[!] Recognised some grammar.");
+        // print("[!] Recognised some grammar."); // Used for testing
+
+        // An empty message string
+        string message = "";
 
         // Read the semantic meanings from the args returned
-        // Put them in a string to print a message in the console
-        string message = "";
         SemanticMeaning[] meanings = args.semanticMeanings;
 
         // Return a set of name/value pairs - keys/values
         foreach (SemanticMeaning meaning in meanings)
         {
+            // Set key
             string keyString = meaning.key.Trim();
+
+            // Set value
             string valueString = meaning.values[0].Trim();
 
+            // Set message
             message = "Your command was: " + valueString;
 
             // Call the Move method from PlayerBehvaviour passing the valueString
@@ -52,7 +60,7 @@ public class GrammarRecogniser : MonoBehaviour
         }
 
         DisplayText.text = message.ToString();
-        Debug.Log("Text Message: " + message);
+        // print("Text Message: " + message); // Used for testing
     }
 
     private void OnApplicationQuit()
@@ -61,8 +69,11 @@ public class GrammarRecogniser : MonoBehaviour
         {
             gr.OnPhraseRecognized -= GR_OnPhrasesRecognised;
 
-            Debug.Log("[!] GR has stopped.");
+            // Inform of Grammar Recogniser being stopped
+            print("[!] GR has stopped.");
+
+            // Stop the grammar recogniser
             gr.Stop();
         }
     }
-}
+} // Class - END
