@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static int startingScore = 0;
     public static bool paused = false;
     public static float levelOneSpeed = 1f;
-    public static float levelTwoScore = 10f;
+    public static int levelTwoScore = 10;
     public static float levelTwoSpeed = 2f;
     public static float startingSpawnTime = 3f;
     public static float resetSpawnTime = 3f;
