@@ -12,6 +12,12 @@ This is a project repository for a Unity Dropper Game which has been made as par
 
 <br>
 
+## Requirements
+
+- Unity (Version 2020.3.29f1)
+
+<br>
+
 ## Contact Me
 
 Email: G00369579@gmit.ie
