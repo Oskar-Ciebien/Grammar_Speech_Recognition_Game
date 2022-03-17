@@ -7,20 +7,25 @@
             <item>
                 <ruleref uri="#gamestate" />
             </item>
+
             <item>
                 <ruleref uri="#movement" />
             </item>
+
             <item>
-                <ruleref uri="#mainmenustate" />
+                <ruleref uri="#mainmenu" />
             </item>
+
             <item>
-                <ruleref uri="#pausestate" />
+                <ruleref uri="#optionsmenu" />
             </item>
+
+            <item>
+                <ruleref uri="#pausemenu" />
+            </item>
+
             <item>
                 <ruleref uri="#deathstate" />
-            </item>
-            <item>
-                <ruleref uri="#optionsstate" />
             </item>
         </one-of>
     </rule>
@@ -82,7 +87,7 @@
         </one-of>
     </rule>
 
-    <rule id="mainmenustate">
+    <rule id="mainmenu">
         <one-of>
             <item>
                 <tag>out.action = "start";</tag>
@@ -139,7 +144,7 @@
         </one-of>
     </rule>
 
-    <rule id="optionsstate">
+    <rule id="optionsmenu">
         <one-of>
             <item>
                 <tag>out.action = "color";</tag>
@@ -169,7 +174,7 @@
         </one-of>
     </rule>
 
-    <rule id="pausestate">
+    <rule id="pausemenu">
         <one-of>
             <item>
                 <tag>out.action = "unpause";</tag>
