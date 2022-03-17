@@ -4,6 +4,14 @@
     <strong>Student Name:</strong> Oskar Ciebien   <strong>Student ID:</strong> G00369579
 </p>
 
+---
+
+# Table of Contents
+
+- [Introduction](#introduction)
+- [Requirements](#requirements)
+- [Contact Me](#contact-me)
+
 <br>
 
 ## Introduction
