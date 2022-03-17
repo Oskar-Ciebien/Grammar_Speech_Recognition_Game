@@ -9,3 +9,11 @@
 ## Introduction
 
 This is a project repository for a Unity Dropper Game which has been made as part of the Gesture Based UI Development module.
+
+<br>
+
+## Contact Me
+
+Email: G00369579@gmit.ie
+<br>
+LinkedIn: https://www.linkedin.com/in/oskar-ciebien/
