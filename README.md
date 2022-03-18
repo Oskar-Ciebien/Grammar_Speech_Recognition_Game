@@ -22,7 +22,8 @@ This is a project repository for a Unity Dropper Game which has been made as par
 
 ## Requirements
 
-- Unity (Version 2020.3.29f1)
+- Unity (Version 2020.3.29f1).
+- English (United States) Speech Recognition for Windows 10 or higher.
 
 <br>
 
