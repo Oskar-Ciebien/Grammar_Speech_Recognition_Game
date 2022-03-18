@@ -9,6 +9,7 @@
 # Table of Contents
 
 - [Introduction](#introduction)
+- [How to Play](#how-to-play)
 - [Requirements](#requirements)
 - [Contact Me](#contact-me)
 
@@ -17,6 +18,12 @@
 ## Introduction
 
 This is a project repository for a Unity Dropper Game which has been made as part of the Gesture Based UI Development module.
+
+<br>
+
+## How to Play
+
+You can test out the game by cloning this GitHub repository and using the editor to play it.
 
 <br>
 
