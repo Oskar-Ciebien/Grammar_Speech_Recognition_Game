@@ -39,3 +39,9 @@ You can test out the game by cloning this GitHub repository and using the editor
 Email: G00369579@gmit.ie
 <br>
 LinkedIn: https://www.linkedin.com/in/oskar-ciebien/
+
+<br>
+
+```
+Please do not use this project as your own. If you would like to download it, please do get in contact with me. Thank you.
+```
